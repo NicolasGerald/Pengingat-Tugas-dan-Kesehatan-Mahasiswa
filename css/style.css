@@ -1,0 +1,453 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    padding: 25px;
+}
+
+/* CARD UMUM */
+.card{
+    background: white;
+    padding: 22px;
+    margin-top: 20px;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+h1, h2, h3{
+    color: #111827;
+}
+
+/* BUTTON */
+button,
+.btn{
+    background: #1f2937;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover,
+.btn:hover{
+    background: #374151;
+}
+
+.btn-edit{
+    background: #2563eb;
+}
+
+.btn-hapus{
+    background: #ef4444;
+}
+
+/* NAVBAR */
+.navbar{
+    background: white;
+    color: #111827;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a{
+    color: #1f2937;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+}
+
+.navbar a:hover{
+    color: #2563eb;
+}
+
+/* SIDEBAR MIRIP WIREFRAME */
+.sidebar{
+    width: 230px;
+    height: 100vh;
+    background: #ffffff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 25px 15px;
+    border-right: 1px solid #e5e7eb;
+}
+
+.sidebar h2{
+    color: #111827;
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 22px;
+}
+
+.sidebar a{
+    display: block;
+    color: #374151;
+    padding: 13px 16px;
+    margin-bottom: 8px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sidebar a:hover{
+    background: #eaf2ff;
+    color: #2563eb;
+}
+
+/* CONTENT */
+.main-content{
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* STATISTIK DASHBOARD */
+.stats{
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card{
+    background: white;
+    padding: 22px;
+    border-radius: 16px;
+    width: 30%;
+    min-width: 180px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.stat-card h3{
+    margin: 0;
+    color: #374151;
+    font-size: 15px;
+}
+
+.stat-card p{
+    font-size: 34px;
+    font-weight: bold;
+    color: #111827;
+    margin: 12px 0 0;
+}
+
+/* TABLE */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+th{
+    background: #1f2937;
+    color: white;
+    padding: 14px;
+}
+
+td{
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover{
+    background: #f3f4f6;
+}
+
+/* FORM */
+input, select, textarea{
+    width: 100%;
+    padding: 13px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: white;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    border-color: #2563eb;
+}
+
+textarea{
+    height: 110px;
+}
+
+/* HALAMAN LOGIN */
+.login-box{
+    max-width: 420px;
+    margin: 70px auto;
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.login-box h1{
+    margin-bottom: 5px;
+}
+
+.login-box p{
+    color: #6b7280;
+}
+
+.login-box button{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* BADGE PRIORITAS */
+.badge{
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.rendah{
+    background: #dcfce7;
+    color: #166534;
+}
+
+.sedang{
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.tinggi{
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    .sidebar{
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    .main-content{
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .stat-card{
+        width: 100%;
+    }
+
+    .stats{
+        flex-direction: column;
+    }
+}
+
+.login-page{
+    background: #f7f9fc;
+}
+
+.login-box{
+    width: 400px;
+    background: white;
+    padding: 40px;
+    margin: 80px auto;
+    border-radius: 22px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.login-icon{
+    width: 85px;
+    height: 85px;
+    background: #eaf2ff;
+    color: #1f2937;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+}
+
+.login-box h1{
+    margin-bottom: 8px;
+}
+
+.login-box p{
+    color: #6b7280;
+    margin-bottom: 28px;
+}
+
+.input-group{
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.input-group i{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #6b7280;
+}
+
+.input-group input{
+    padding-left: 45px;
+}
+
+.login-box button{
+    width: 100%;
+    margin-top: 8px;
+}
+
+.sidebar a i{
+    margin-right: 10px;
+    width: 20px;
+}
+
+.stat-icon{
+    width: 65px;
+    height: 65px;
+    border-radius: 16px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.blue{
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.green{
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.orange{
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+.health-list{
+    list-style: none;
+    padding: 0;
+}
+
+.health-list li{
+    background: #f9fafb;
+    margin-bottom: 10px;
+    padding: 13px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+}
+
+.health-list i{
+    color: #16a34a;
+    margin-right: 8px;
+}
+
+.stat-card form{
+    margin-top: 15px;
+}
+
+.stat-card form button{
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 10px 8px;
+    margin-bottom: 30px;
+}
+
+.logo-icon-sidebar{
+    min-width: 55px;
+    height: 55px;
+
+    border-radius: 16px;
+
+    background: #dbeafe;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #2563eb;
+    font-size: 24px;
+}
+
+.logo-text h2{
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.logo-text p{
+    margin: 2px 0 0;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.logout-btn{
+    margin-top: auto !important;
+}
+
+.logo .logo-text h2{
+    text-align: left !important;
+    font-size: 22px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    white-space: normal !important;
+}
+
+.logo .logo-text p{
+    text-align: left !important;
+    margin-top: 4px !important;
+}
+
+.logo{
+    align-items: center !important;
+}
