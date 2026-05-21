@@ -5,28 +5,27 @@ include 'koneksi.php';
 
 if(isset($_POST['login'])){
 
-    $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
 
     $data = mysqli_query($conn,
     "SELECT * FROM users
-    WHERE username='$username'
+    WHERE email='$email'
     AND password='$password'");
 
     $cek = mysqli_num_rows($data);
 
     if($cek > 0){
 
-        $_SESSION['username'] = $username;
+    $d = mysqli_fetch_array($data);
 
-        header("location:dashboard.php");
+    $_SESSION['username'] = $d['username'];
 
-    }else{
-
-        echo "Login gagal!";
-
+    header("location:dashboard.php");
+}
+    else{
+        echo "<script>alert('Login gagal! Email atau password salah.');</script>";
     }
-
 }
 
 ?>
@@ -42,9 +41,9 @@ if(isset($_POST['login'])){
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
-<body class="login-page">
+<body class="login-body">
 
-<div class="login-box">
+<div class="login-card">
 
     <div class="login-icon">
         <i class="fa-solid fa-heart-pulse"></i>
@@ -52,33 +51,32 @@ if(isset($_POST['login'])){
 
     <h1>Login</h1>
 
-    <p>Website Pengingat Tugas dan Kesehatan Mahasiswa</p>
+    <p class="login-subtitle">
+        Website Pengingat Tugas dan Kesehatan Mahasiswa
+    </p>
 
     <form method="POST">
 
         <div class="input-group">
-            <i class="fa-solid fa-user"></i>
-
-            <input type="text"
-            name="username"
-            placeholder="Username"
-            required>
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" name="email" placeholder="Email" required>
         </div>
 
         <div class="input-group">
             <i class="fa-solid fa-lock"></i>
-
-            <input type="password"
-            name="password"
-            placeholder="Password"
-            required>
+            <input type="password" name="password" placeholder="Password" required>
         </div>
 
-        <button type="submit" name="login">
+        <button class="login-btn" type="submit" name="login">
             Login
         </button>
 
     </form>
+
+    <p class="register-link">
+        Belum punya akun?
+        <a href="register.php">Daftar di sini</a>
+    </p>
 
 </div>
 

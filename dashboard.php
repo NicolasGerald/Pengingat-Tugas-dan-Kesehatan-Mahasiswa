@@ -7,6 +7,8 @@ if(!isset($_SESSION['username'])){
 
 include 'koneksi.php';
 
+$username = $_SESSION['username'];
+
 $data = mysqli_query($conn,
 "SELECT * FROM tugas");
 
@@ -69,6 +71,16 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 <div class="main-content">
 
 <h1>Dashboard Mahasiswa</h1>
+
+<div class="welcome-card">
+
+    <div>
+        <h2>Selamat Datang, <?php echo $username; ?> 👋</h2>
+        <p>Semoga harimu produktif hari ini</p>
+    </div>
+
+</div>
+
 <div class="stats">
 
     <div class="stat-card">

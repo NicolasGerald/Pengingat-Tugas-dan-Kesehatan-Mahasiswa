@@ -43,7 +43,11 @@ href="css/style.css">
 
 <h1>Tambah Tugas</h1>
 
-<div class="card">
+<p class="subtitle">
+Kelola tugas kuliahmu dengan lebih rapi dan produktif
+</p>
+
+<div class="card form-card">
 
 <form method="POST">
 
@@ -79,6 +83,14 @@ name="submit">
 Simpan Tugas
 
 </button>
+
+<div class="form-button">
+
+<a href="dashboard.php" class="btn-dashboard">
+    Dashboard
+</a>
+
+</div>
 
 </form>
 
