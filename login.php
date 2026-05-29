@@ -43,6 +43,33 @@ if(isset($_POST['login'])){
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
+
+    <style>
+.form-login-group{
+    position: relative !important;
+    margin-bottom: 22px !important;
+}
+
+.form-login-group i{
+    position: absolute !important;
+    left: 22px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: #6b7280 !important;
+    font-size: 20px !important;
+}
+
+.form-login-group input{
+    width: 100% !important;
+    height: 64px !important;
+    padding-left: 60px !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 12px !important;
+    outline: none !important;
+    font-size: 18px !important;
+    background: white !important;
+}
+</style>
 </head>
 
 <body class="login-body">
@@ -61,12 +88,12 @@ if(isset($_POST['login'])){
 
     <form method="POST">
 
-        <div class="input-group">
+        <div class="form-login-group">
             <i class="fa-solid fa-envelope"></i>
             <input type="email" name="email" placeholder="Email" required>
         </div>
 
-        <div class="input-group">
+        <div class="form-login-group">
             <i class="fa-solid fa-lock"></i>
             <input type="password" name="password" placeholder="Password" required>
         </div>

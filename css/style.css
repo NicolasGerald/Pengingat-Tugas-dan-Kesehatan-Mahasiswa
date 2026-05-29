@@ -1,9 +1,9 @@
 *{
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
     background: #f7f9fc;
     margin: 0;
     padding: 0;
@@ -21,15 +21,34 @@ h1, h2, h3{
 }
 
 /* CARD */
-.card{
+.card, .welcome-card, .stat-card{
     background: white;
-    padding: 22px;
-    margin-top: 20px;
     border-radius: 16px;
     border: 1px solid #e5e7eb;
     box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
+.card{
+    padding: 22px;
+    margin-top: 20px;
+}
+
+.welcome-card{
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.welcome-card h2{
+    margin: 0;
+    font-size: 26px;
+}
+
+.welcome-card p{
+    margin-top: 8px;
+    color: #6b7280;
+}
+
+/* BUTTON */
 button, .btn{
     background: #1f2937;
     color: white;
@@ -52,6 +71,7 @@ button:hover, .btn:hover{
     background: #ef4444;
 }
 
+/* SIDEBAR */
 .sidebar{
     width: 230px;
     height: 100vh;
@@ -63,11 +83,6 @@ button:hover, .btn:hover{
     border-right: 1px solid #e5e7eb;
     display: flex;
     flex-direction: column;
-}
-
-.sidebar h2{
-    text-align: center;
-    margin-bottom: 35px;
 }
 
 .sidebar a{
@@ -94,6 +109,7 @@ button:hover, .btn:hover{
     margin-top: auto !important;
 }
 
+/* LOGO SIDEBAR */
 .logo{
     display: flex;
     align-items: center;
@@ -127,11 +143,13 @@ button:hover, .btn:hover{
     color: #6b7280;
 }
 
+/* CONTENT */
 .main-content{
     margin-left: 250px;
     padding: 30px;
 }
 
+/* STATISTIK */
 .stats{
     display: flex;
     gap: 18px;
@@ -140,13 +158,9 @@ button:hover, .btn:hover{
 }
 
 .stat-card{
-    background: white;
     padding: 22px;
-    border-radius: 16px;
     width: 30%;
     min-width: 180px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
 .stat-card h3{
@@ -188,6 +202,7 @@ button:hover, .btn:hover{
     color: #ea580c;
 }
 
+/* TABLE */
 table{
     width: 100%;
     border-collapse: collapse;
@@ -213,6 +228,7 @@ tr:hover{
     background: #f3f4f6;
 }
 
+/* FORM UMUM */
 input, select, textarea{
     width: 100%;
     padding: 13px;
@@ -232,6 +248,43 @@ textarea{
     height: 110px;
 }
 
+.form-card{
+    max-width: 760px;
+    margin-top: 20px;
+}
+
+.subtitle{
+    color: #6b7280;
+    margin-top: -10px;
+    margin-bottom: 25px;
+}
+
+.form-button{
+    margin-top: 20px;
+}
+
+.form-button button,
+.btn-dashboard{
+    width: 220px;
+}
+
+.btn-dashboard{
+    display: inline-block;
+    margin-top: 15px;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-dashboard:hover{
+    background: #1d4ed8;
+}
+
+/* BADGE */
 .badge{
     padding: 6px 12px;
     border-radius: 8px;
@@ -254,6 +307,7 @@ textarea{
     color: #991b1b;
 }
 
+/* KESEHATAN */
 .health-list{
     list-style: none;
     padding: 0;
@@ -272,8 +326,9 @@ textarea{
     margin-right: 8px;
 }
 
-/* LOGIN PAGE */
-.login-body{
+/* LOGIN & REGISTER */
+.login-body,
+.register-body{
     background: #f3f6fb;
     min-height: 100vh;
     display: flex;
@@ -281,7 +336,8 @@ textarea{
     align-items: center;
 }
 
-.login-card{
+.login-card,
+.register-card{
     width: 430px;
     background: white;
     padding: 45px;
@@ -290,7 +346,8 @@ textarea{
     text-align: center;
 }
 
-.login-icon{
+.login-icon,
+.register-icon{
     width: 90px;
     height: 90px;
     background: #e8f1ff;
@@ -301,48 +358,53 @@ textarea{
     align-items: center;
 }
 
-.login-icon i{
+.login-icon i,
+.register-icon i{
     font-size: 42px;
     color: #1f2937;
 }
 
-.login-card h1{
+.login-card h1,
+.register-card h1{
     font-size: 42px;
     margin: 10px 0;
 }
 
-.login-subtitle{
+.login-subtitle,
+.register-subtitle{
     color: #6b7280;
     font-size: 18px;
     margin-bottom: 35px;
 }
 
-.login-card .input-group{
-    display: flex;
-    align-items: center;
-    border: 1px solid #d1d5db;
-    border-radius: 12px;
+.form-login-group{
+    position: relative;
     margin-bottom: 22px;
-    padding: 0 15px;
 }
 
-.login-card .input-group i{
+.form-login-group i{
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #6b7280;
     font-size: 20px;
-    margin-right: 12px;
 }
 
-.login-card .input-group input{
-    border: none;
-    outline: none;
+.form-login-group input{
     width: 100%;
-    padding: 16px 10px;
-    font-size: 16px;
+    height: 64px;
+    padding-left: 60px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 18px;
+    background: white;
     margin: 0;
-    background: transparent;
 }
 
-.login-btn{
+.login-btn,
+.register-btn{
     width: 100%;
     background: #1f2937;
     color: white;
@@ -351,127 +413,19 @@ textarea{
     font-size: 18px;
 }
 
-.register-link{
+.register-link,
+.login-link{
     margin-top: 25px;
     color: #6b7280;
 }
 
-.register-link a{
+.register-link a,
+.login-link a{
     color: #5b21b6;
     font-weight: bold;
 }
 
-@media(max-width: 768px){
-    .sidebar{
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #e5e7eb;
-    }
-
-    .main-content{
-        margin-left: 0;
-        padding: 20px;
-    }
-
-    .stat-card{
-        width: 100%;
-    }
-
-    .stats{
-        flex-direction: column;
-    }
-
-    .login-card{
-        width: 90%;
-        padding: 30px;
-    }
-}
-
-.welcome-card{
-    background: white;
-    padding: 22px;
-    border-radius: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
-
-.welcome-card h2{
-    margin: 0;
-    font-size: 26px;
-}
-
-.welcome-card p{
-    margin-top: 8px;
-    color: #6b7280;
-}
-
-.form-card{
-    max-width: 850px;
-}
-
-.btn-kembali{
-    display: inline-block;
-    margin-bottom: 18px;
-    background: #2563eb;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-kembali:hover{
-    background: #1d4ed8;
-}
-
-.subtitle{
-    color: #6b7280;
-    margin-top: -10px;
-    margin-bottom: 25px;
-}
-
-.form-card{
-    max-width: 760px;
-    margin-top: 20px;
-}
-
-.form-button{
-    margin-top: 20px;
-}
-
-.form-button button{
-    width: 220px;
-}
-
-.btn-dashboard{
-    display: inline-block;
-    margin-top: 15px;
-    width: 220px;
-    text-align: center;
-}
-
-.form-button button{
-    flex: 1;
-}
-
-.btn-dashboard{
-    flex: 1;
-    background: #2563eb;
-    color: white;
-    text-align: center;
-    padding: 14px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.btn-dashboard:hover{
-    background: #1d4ed8;
-}
-
+/* ALERT */
 .alert{
     padding: 12px;
     border-radius: 10px;
@@ -490,8 +444,8 @@ textarea{
     color: #991b1b;
 }
 
-@media (max-width: 768px) {
-
+/* RESPONSIVE */
+@media(max-width: 768px){
     .sidebar{
         width: 100%;
         height: auto;
