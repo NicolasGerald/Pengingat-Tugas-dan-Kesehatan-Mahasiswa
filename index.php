@@ -1,3 +1,5 @@
 <?php
-echo "Website Tugas Sehat Berhasil!;
+
+header("location:login.php");
+
 ?>
